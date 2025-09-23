@@ -22,24 +22,24 @@ class SuraItem extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               SvgPicture.asset(AssetsManager.quranNumber,height: 52,width: 52,),
-              Text(suraModel.suraNumber.toString(),style: TextStyle(
+              Text(suraModel.suraNumber.toString(),style:const TextStyle(
                 color: ColorManager.whiteColor,
                 fontWeight: FontWeight.w700,
                 fontSize: 20
               ),)
             ],
           ),
-          SizedBox(width: 24,),
+         const SizedBox(width: 24,),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(suraModel.suraNameEn,style: TextStyle(
+                Text(suraModel.suraNameEn,style:const TextStyle(
                     color: ColorManager.whiteColor,
                     fontWeight: FontWeight.w700,
                     fontSize: 20
                 ),),
-                Text("${suraModel.versesNumber} Verses",style: TextStyle(
+                Text("${suraModel.versesNumber} Verses",style: const TextStyle(
                     color: ColorManager.whiteColor,
                     fontWeight: FontWeight.w700,
                     fontSize: 14
@@ -47,7 +47,7 @@ class SuraItem extends StatelessWidget {
               ],
             ),
           ),
-          Text(suraModel.suraNameAr,style: TextStyle(
+          Text(suraModel.suraNameAr,style:const  TextStyle(
               color: ColorManager.whiteColor,
               fontWeight: FontWeight.w700,
               fontSize: 20

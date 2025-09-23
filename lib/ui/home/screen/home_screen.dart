@@ -18,11 +18,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   List<Widget> tabs = [
-    QuranTab(),
-    HadethTab(),
-    SebhaTab(),
-    RadioTab(),
-    TimeTab()
+   const QuranTab(),
+   const HadethTab(),
+   const SebhaTab(),
+   const RadioTab(),
+    const TimeTab()
   ];
   @override
   Widget build(BuildContext context) {
@@ -41,47 +41,47 @@ class _HomeScreenState extends State<HomeScreen> {
         destinations: [
           NavigationDestination(
               icon: SvgPicture.asset(AssetsManager.quranIcon,
-                colorFilter: ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
               ),
               label: StringsManager.quran,
               selectedIcon: SvgPicture.asset(AssetsManager.quranIcon,
-                colorFilter: ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
               ),
           ),
           NavigationDestination(
               icon: SvgPicture.asset(AssetsManager.hadethIcon,
-                colorFilter: ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
               ),
               label: StringsManager.hadith,
               selectedIcon: SvgPicture.asset(AssetsManager.hadethIcon,
-                colorFilter: ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
               ),
           ),
           NavigationDestination(
               icon: SvgPicture.asset(AssetsManager.sebhaIcon,
-                colorFilter: ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
               ),
               label: StringsManager.sebha,
               selectedIcon: SvgPicture.asset(AssetsManager.sebhaIcon,
-                colorFilter: ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
               ),
           ),
           NavigationDestination(
               icon: SvgPicture.asset(AssetsManager.radioIcon,
-                colorFilter: ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
               ),
               label: StringsManager.radio,
               selectedIcon: SvgPicture.asset(AssetsManager.radioIcon,
-                colorFilter: ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
               ),
           ),
           NavigationDestination(
               icon: SvgPicture.asset(AssetsManager.timeIcon,
-                colorFilter: ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.blackColor, BlendMode.srcIn),
               ),
               label: StringsManager.time,
               selectedIcon: SvgPicture.asset(AssetsManager.timeIcon,
-                colorFilter: ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
+                colorFilter:const ColorFilter.mode(ColorManager.whiteColor, BlendMode.srcIn),
               ),
           ),
         ],
