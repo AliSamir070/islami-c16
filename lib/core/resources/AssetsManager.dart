@@ -17,4 +17,11 @@ abstract class AssetsManager{
   static const String islami = "assets/images/islami.png";
   static const String quranNumber = "assets/images/hexagonal.svg";
   static const String quranRecently = "assets/images/quran_recently.png";
+  static const String welcomeBearish = "assets/images/welcome-bearish.png";
+  static const String welcomeMosque = "assets/images/welcome-mosque.png";
+  static const String welcomeQuran = "assets/images/welcome-quran.png";
+  static const String welcomeRadio = "assets/images/welcome-radio.png";
+  static const String welcome = "assets/images/welcome.png";
+
+
 }
