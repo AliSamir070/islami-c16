@@ -84,28 +84,33 @@ class _SebhaTabState extends State<SebhaTab> {
                     ),
                   ),
 
-                  Column(
-                    children: [
-                      Text(
-                        tsabih[index],
-                        style:const TextStyle(
-                          fontSize: 36,
-                          fontWeight: FontWeight.w700,
-                          color: ColorManager.whiteColor,
-                        ),
-                      ),
-                      GestureDetector(
-                        onTap: _incrementCounter,
-                        child: Text(
-                          "$counter",
-                          style:const TextStyle(
-                            fontSize: 36,
-                            fontWeight: FontWeight.w700,
-                            color: ColorManager.whiteColor,
+                  Positioned.fill(
+                    child: InkWell(
+                      onTap: _incrementCounter,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            tsabih[index],
+                            style:const TextStyle(
+                              fontSize: 36,
+                              fontWeight: FontWeight.w700,
+                              color: ColorManager.whiteColor,
+                            ),
                           ),
-                        ),
+                          SizedBox(height: 20,),
+                          Text(
+                            "$counter",
+                            style:const TextStyle(
+                              fontSize: 36,
+                              fontWeight: FontWeight.w700,
+                              color: ColorManager.whiteColor,
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   )
                 ],
               )

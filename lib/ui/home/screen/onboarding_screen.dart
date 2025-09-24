@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_c16/core/resources/AssetsManager.dart';
 import 'package:islami_c16/core/resources/ColorManager.dart';
 import 'package:islami_c16/core/resources/RoutesManager.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -159,7 +160,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                   TextButton(
                     onPressed: _currentPage == onboardingData.length - 1
-                        ? () {
+                        ? () async{
+                      final prefs = await SharedPreferences.getInstance();
+                      await prefs.setBool('seenOnboarding', true);
                       Navigator.pushReplacementNamed(
                           context, RoutesManager.homeRoute);
                     }
