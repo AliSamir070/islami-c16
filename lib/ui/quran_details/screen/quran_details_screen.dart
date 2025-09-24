@@ -26,10 +26,10 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
         scrolledUnderElevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        iconTheme: IconThemeData(color: ColorManager.goldColor),
+        iconTheme:const IconThemeData(color: ColorManager.goldColor),
         title: Text(
           suraModel.suraNameEn,
-          style: TextStyle(
+          style: const TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 20,
               color: ColorManager.goldColor),
@@ -47,22 +47,22 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
                     Image.asset(AssetsManager.leftCorner,height: 92,width: 92,),
                     Text(
                       suraModel.suraNameAr,
-                      style: TextStyle(
+                      style:const TextStyle(
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
                           color: ColorManager.goldColor),
                     ),
                     Image.asset(AssetsManager.rightCorner,height: 92,width: 92,),
                   ],),
-                SizedBox(height: 3,),
+                const SizedBox(height: 3,),
                 Expanded(
                   child: suraText.isEmpty
-                      ? Center(child: CircularProgressIndicator(color: ColorManager.goldColor,))
+                      ?const Center(child: CircularProgressIndicator(color: ColorManager.goldColor,))
                       :SingleChildScrollView(
                     child: Text(suraText,
                       textAlign: TextAlign.center,
                       textDirection: TextDirection.rtl,
-                      style: TextStyle(
+                      style:const TextStyle(
                           height: 2.5,
                           color: ColorManager.goldColor,
                           fontWeight: FontWeight.w700,

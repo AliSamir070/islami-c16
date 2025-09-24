@@ -9,14 +9,14 @@ class RecentlyItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 17),
+      padding:const EdgeInsets.symmetric(horizontal: 17),
       decoration: BoxDecoration(
         color: ColorManager.goldColor,
         borderRadius: BorderRadius.circular(20)
       ),
       child: Row(
         children: [
-          Column(
+         const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
