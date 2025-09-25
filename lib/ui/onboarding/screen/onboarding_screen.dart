@@ -168,14 +168,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       pages.length,
                       (index) => Container(
                         margin: const EdgeInsets.symmetric(horizontal: 4),
-                        width: 10,
-                        height: 10,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: _currentPage == index
-                              ? ColorManager.goldColor
-                              : ColorManager.grey,
-                        ),
+                        width:  _currentPage == index?  20  :  10 ,
+                        height: 8,
+                        decoration:
+                        _currentPage == index ? 
+                          BoxDecoration(
+                           borderRadius: BorderRadius.circular(10),
+                           shape: BoxShape.rectangle,
+                           color: ColorManager.goldColor
+                          )
+                        
+                        :  const BoxDecoration(
+                           shape:    BoxShape.circle,
+                           color:ColorManager.grey,
+                          ),
                       ),
                     ),
                   ),

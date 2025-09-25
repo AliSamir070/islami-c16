@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   final bool seen ;
   const MyApp({super.key, required this.seen});
 
-  // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
       
 
       },
-      initialRoute:RoutesManager.homeRoute ,
+     // initialRoute:RoutesManager.homeRoute ,
 
       home: seen ?  HomeScreen() : const OnBoardingScreen() ,
     );

@@ -22,6 +22,9 @@ abstract class AssetsManager{
   static const String welcomeQuran = "assets/images/welcome-quran.png";
   static const String welcomeRadio = "assets/images/welcome-radio.png";
   static const String welcome = "assets/images/welcome.png";
+  static const String sebhaMedal = "assets/images/sebha_medal.png";
+  static const String backgroundSebhaTab = "assets/images/backgroundSebhaTab.jpg";
+  static const String sebhaBody = "assets/images/sebhaBody.png";
 
 
 }
