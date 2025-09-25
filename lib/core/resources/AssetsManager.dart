@@ -1,4 +1,4 @@
-abstract class AssetsManager{
+abstract class AssetsManager {
   static const String islamiLogo = "assets/images/islami_logo.png";
   static const String quranIcon = "assets/images/quran_icon.svg";
   static const String hadethIcon = "assets/images/hadeth_icon.svg";
@@ -9,7 +9,8 @@ abstract class AssetsManager{
   static const String hadeithMosque = "assets/images/hadith_mosque.png";
   static const String hadeithCardBack = "assets/images/HadithCardBack.png";
   static const String leftHadithCorner = "assets/images/left_corner_hadeth.png";
-  static const String rightHadithCorner = "assets/images/right_corner_hadeth.png";
+  static const String rightHadithCorner =
+      "assets/images/right_corner_hadeth.png";
   static const String leftCorner = "assets/images/left_corner.png";
   static const String rightCorner = "assets/images/right_corner.png";
   static const String mosque = "assets/images/mosque.png";
@@ -17,4 +18,7 @@ abstract class AssetsManager{
   static const String islami = "assets/images/islami.png";
   static const String quranNumber = "assets/images/hexagonal.svg";
   static const String quranRecently = "assets/images/quran_recently.png";
+  static const String sebhaBack = "assets/images/sebha_back.jpg";
+  static const String sebhaBody = "assets/images/SebhaBody.svg";
+  static const String sebhaHead = "assets/images/sebha_head.png";
 }
