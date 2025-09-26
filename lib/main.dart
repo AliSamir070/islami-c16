@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:islami_c16/core/PrefsManager.dart';
 import 'package:islami_c16/core/resources/ColorManager.dart';
 import 'package:islami_c16/core/resources/RoutesManager.dart';
 import 'package:islami_c16/ui/home/screen/home_screen.dart';
 import 'package:islami_c16/ui/quran_details/screen/quran_details_screen.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await PrefsManager.init();
   runApp(const MyApp());
 }
 
