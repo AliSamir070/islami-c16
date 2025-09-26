@@ -5,4 +5,7 @@ abstract class AssetsManager{
   static const String sebhaIcon = "assets/images/sebha_icon.svg";
   static const String radioIcon = "assets/images/radio_icon.svg";
   static const String timeIcon = "assets/images/time_icon.svg";
+  static const String sebhaBack = "assets/images/sebha_back.png";
+  static const String sebhaBody = "assets/images/sebha_body.png";
+  static const String sebhaHead = "assets/images/sebha_head.png";
 }
