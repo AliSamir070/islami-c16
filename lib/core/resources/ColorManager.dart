@@ -5,4 +5,6 @@ abstract final class ColorManager{
   static const Color blackColor = Color(0xff202020);
   static const Color whiteColor = Color(0xffFFFFFF);
   static const Color textfieldColor = Color(0xffFEFFE8);
+  static const Color onboardingIndicatorColor = Color(0xFF707070);
+
 }
