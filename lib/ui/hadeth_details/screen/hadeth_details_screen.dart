@@ -3,7 +3,7 @@ import 'package:islami_c16/model/HadethModel.dart';
 
 import '../../../core/resources/AssetsManager.dart';
 import '../../../core/resources/ColorManager.dart';
-
+// solve conflict
 class HadethDetailsScreen extends StatelessWidget {
   const HadethDetailsScreen({super.key});
 

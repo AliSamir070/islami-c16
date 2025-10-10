@@ -8,12 +8,14 @@ import 'package:islami_c16/model/SuraModel.dart';
 
 class SuraItem extends StatelessWidget {
   SuraModel suraModel;
-  SuraItem(this.suraModel);
+  void Function() addRecently;
+  SuraItem(this.suraModel,this.addRecently);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        addRecently();
         Navigator.pushNamed(context, RoutesManager.quranRoute,arguments: suraModel);
       },
       child: Row(
