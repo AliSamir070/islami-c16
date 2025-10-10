@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_c16/core/PrefsManager.dart';
 import 'package:islami_c16/core/resources/ColorManager.dart';
 import 'package:islami_c16/core/resources/RoutesManager.dart';
+import 'package:islami_c16/ui/hadeth_details/screen/hadeth_details_screen.dart';
 import 'package:islami_c16/ui/home/screen/home_screen.dart';
 import 'package:islami_c16/ui/quran_details/screen/quran_details_screen.dart';
 
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         RoutesManager.homeRoute:(context) => HomeScreen(),
-        RoutesManager.quranRoute:(context)=>QuranDetailsScreen()
+        RoutesManager.quranRoute:(context)=>QuranDetailsScreen(),
+        HadethScreen.routeName:(_)=>HadethScreen()
       },
       initialRoute:RoutesManager.homeRoute ,
     );
