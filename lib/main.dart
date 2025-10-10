@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       routes: {
         RoutesManager.homeRoute:(context) => HomeScreen(),
         RoutesManager.quranRoute:(context)=>QuranDetailsScreen(),
-        HadethScreen.routeName:(_)=>HadethScreen()
+        RoutesManager.hadethRoute:(context)=>HadethDetailsScreen()
       },
       initialRoute:RoutesManager.homeRoute ,
     );
