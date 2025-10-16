@@ -17,4 +17,14 @@ abstract class AssetsManager{
   static const String islami = "assets/images/islami.png";
   static const String quranNumber = "assets/images/hexagonal.svg";
   static const String quranRecently = "assets/images/quran_recently.png";
+
+
+  static const String welcomeislmi = "assets/images/WelcomeApp.png";
+  static const String readequran = "assets/images/Reading_the_Quran.png";
+  static const String welcomemosque = "assets/images/Welcome _To_Islami.png";
+  static const String bearish = "assets/images/Bearish_boarding.png";
+  static const String  micRadio = "assets/images/mic_boarding.png";
+  static const String  sebhabackground = "assets/images/Background_sabha.png";
+  static const String  sebhaheader = "assets/images/Mask group.png";
+
 }
