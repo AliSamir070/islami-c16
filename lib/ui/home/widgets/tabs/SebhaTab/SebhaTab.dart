@@ -23,7 +23,7 @@ class _SebhaTabState extends State<SebhaTab> {
   void _incrementCounter() {
     setState(() {
       currentCount++;
-      rotationTurns += 1 / 33; // تلف مع كل تسبيحة
+      rotationTurns += 1 / 33;
 
       if (currentCount > 33) {
         currentCount = 1;
@@ -43,18 +43,15 @@ class _SebhaTabState extends State<SebhaTab> {
         height: double.infinity,
         child: Stack(
           children: [
-            // الخلفية
             Positioned.fill(
               child: Image.asset(
                 AssetsManager.sebha_photo,
                 fit: BoxFit.cover,
               ),
             ),
-
             SafeArea(
               child: Column(
                 children: [
-                  // اللوجو
                   Align(
                     alignment: Alignment.center,
                     child: Image.asset(
@@ -64,25 +61,28 @@ class _SebhaTabState extends State<SebhaTab> {
                     ),
                   ),
                   const SizedBox(height: 20),
-
-                  // النص
                   const Text(
                     "سَبِّحِ اسْمَ رَبِّكَ الأعلى ",
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
-                      fontSize: 28,
+                      fontSize: 36,
                       color: ColorManager.whiteColor,
                     ),
                   ),
                   const SizedBox(height: 30),
-
-                  // السبحة + الرأس + النص والعداد
                   Expanded(
                     child: Center(
                       child: Stack(
                         alignment: Alignment.center,
                         children: [
-                          // جسم السبحة (بيلف)
+                          Positioned(
+                            top: 0,
+                            child: Image.asset(
+                              AssetsManager.sebha_hed,
+                              width: width * 0.38,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                           AnimatedRotation(
                             turns: rotationTurns,
                             duration: const Duration(milliseconds: 300),
@@ -92,26 +92,14 @@ class _SebhaTabState extends State<SebhaTab> {
                               fit: BoxFit.cover,
                             ),
                           ),
-
-                          // رأس السبحة (ثابتة)
-                          Positioned(
-                            top: 0,
-                            child: Image.asset(
-                              AssetsManager.sebha_hed,
-                              width: width * 0.28,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-
-                          // الذكر + العداد
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
                                 azkarList[currentZikrIndex],
                                 style: const TextStyle(
-                                  color: ColorManager.goldColor,
-                                  fontSize: 22,
+                                  color: ColorManager.whiteColor,
+                                  fontSize: 36,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -120,7 +108,8 @@ class _SebhaTabState extends State<SebhaTab> {
                                 "$currentCount/33",
                                 style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 18,
+                                  fontSize: 36,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
