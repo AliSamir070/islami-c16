@@ -6,4 +6,5 @@ abstract final class StringsManager{
   static const String sebha = "Sebha";
   static const String radio = "Radio";
   static const String time = "Time";
+  static const String suraName = "Sura Name";
 }
