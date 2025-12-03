@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: NavigationBar(
         backgroundColor: ColorManager.goldColor,
         indicatorColor: ColorManager.blackColor.withOpacity(0.6),

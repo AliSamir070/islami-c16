@@ -2,13 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:islami_c16/core/resources/ColorManager.dart';
 import 'package:islami_c16/core/resources/RoutesManager.dart';
 import 'package:islami_c16/ui/home/screen/home_screen.dart';
+import 'package:islami_c16/ui/onboarding/onboardingTap.dart';
+import 'package:islami_c16/ui/quran_details/screen/quran_details_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs =await SharedPreferences.getInstance();
+  final seenOnboarding = prefs.getBool("seenonboarding")??false;
+
+  runApp( MyApp(seenOnboarding: seenOnboarding));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool seenOnboarding;
+  const MyApp({super.key,required this.seenOnboarding});
 
   // This widget is the root of your application.
   @override
@@ -28,9 +36,11 @@ class MyApp extends StatelessWidget {
         )
       ),
       routes: {
-        RoutesManager.homeRoute:(context) => HomeScreen()
+        RoutesManager.homeRoute:(context) => HomeScreen(),
+        RoutesManager.quranRoute:(context)=>QuranDetailsScreen(),
+        RoutesManager.onboardingscreen:(context) => OnBoardingScreen(),
       },
-      initialRoute:RoutesManager.homeRoute ,
+      initialRoute:seenOnboarding?RoutesManager.homeRoute: RoutesManager.onboardingscreen ,
     );
   }
 }
